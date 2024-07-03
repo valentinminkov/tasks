@@ -49,12 +49,15 @@ function ComponentSkeleton() {
   return (
     <div>
       <div className="flex flex-col space-y-2">
-        <Skeleton className="h-[112px] w-full rounded-none bg-neutral-800" />
+        <Skeleton className="h-[112px] w-full rounded-lg bg-neutral-800" />
         <div className="space-y-1">
           {Array(DEFAULT_VISIBLE_COUNT)
             .fill(null)
             .map((_, i) => (
-              <Skeleton key={i} className="h-[128px] w-full bg-neutral-800" />
+              <Skeleton
+                key={i}
+                className="h-[128px] w-full bg-neutral-800 rounded-sm"
+              />
             ))}
         </div>
       </div>

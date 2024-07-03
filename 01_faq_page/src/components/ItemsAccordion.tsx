@@ -13,12 +13,12 @@ interface Props {
 
 export default function ItemsAccordion({ items }: Props) {
   return (
-    <Accordion type="single" collapsible className="w-full ">
+    <Accordion type="single" collapsible className="w-full rounded-lg ">
       {items.map((item) => (
         <AccordionItem
           value={item.id.toString()}
           key={item.id}
-          className="bg-zinc-800 p-8"
+          className="bg-zinc-800 p-8 rounded-sm"
         >
           <AccordionTrigger className="text-red-600 text-2xl capitalize hover:text-red-400 hover:animate-pulse">
             <span>{item.title}</span>

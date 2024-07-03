@@ -16,7 +16,7 @@ export default function StickyHeaderButton({
   headerBtnDisabled,
 }: Props) {
   return (
-    <div className="sticky top-0 bg-zinc-700 z-50">
+    <div className="rounded-lg sticky top-0 bg-zinc-700 z-50 shadow-xl">
       <div className="p-8 flex justify-between items-center">
         <h1 className="flex items-center gap-4 text-3xl text-white font-bold">
           {label}
@@ -28,7 +28,7 @@ export default function StickyHeaderButton({
           <Button
             data-testid="sticky-header-button"
             onClick={onHeaderBtnClick}
-            className="rounded-none bg-red-600 text-xl p-6 hover:bg-red-400 hover:text-neutral-800"
+            className="rounded-lg bg-red-600 text-xl p-4 hover:bg-red-400 hover:text-neutral-800 transition-all duration-300 ease-in-out shadow-lg"
             disabled={headerBtnDisabled}
           >
             {btnLabel}

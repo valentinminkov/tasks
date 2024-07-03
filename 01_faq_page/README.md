@@ -1,8 +1,10 @@
-# Example Accordion Component
+# Example FAQ Component
 
-### Dummy FAQ page.
+### Expandable Accordion Component with Control Header.
 
-Accoordion component displays data fetched from dummy api.
+Display _n_ items in an accoordion component, if available, more will be displayed on button click.
+
+![preview](image.webp)
 
 ## Scripts
 
@@ -23,4 +25,4 @@ Accoordion component displays data fetched from dummy api.
 
 ---
 
-built with react, typescript, vite, tailwind & [shadcdn](https://ui.shadcn.com/)
+Built with React, TypeScript, Vite, Tailwind, and shadcdn by a human with a computer.

@@ -6,14 +6,30 @@ import ExpandableAccordion from "./components/ExpandableAccordion";
 
 export default function App() {
   const [items, setItems] = useState<IItem[]>([]);
+  const [error, setError] = useState<string>();
 
   useEffect(() => {
     const fetchItems = async () => {
-      const response = await axios.get(ITEMS_API_URL);
-      setItems(response.data);
+      try {
+        const response = await axios.get(ITEMS_API_URL);
+        setItems(response.data);
+      } catch (error) {
+        console.log("Couldn't fetch dummy data", error);
+        setError("Couldn't fetch data");
+      }
     };
+
     fetchItems();
   }, []);
 
-  return <ExpandableAccordion items={items} />;
+  return (
+    <div>
+      {error && (
+        <p className=" lg:px-16 py-8 p-2 text-red-500 animate-pulse text-xl">
+          {error}
+        </p>
+      )}
+      <ExpandableAccordion items={items} />
+    </div>
+  );
 }

@@ -20,7 +20,7 @@ export default function ItemsAccordion({ items }: Props) {
           key={item.id}
           className="bg-zinc-800 p-8 rounded-sm"
         >
-          <AccordionTrigger className="text-red-600 text-2xl capitalize hover:text-red-400 hover:animate-pulse">
+          <AccordionTrigger className="text-red-600 text-2xl capitalize hover:text-red-400 hover:animate-pulse text-left">
             <span>{item.title}</span>
           </AccordionTrigger>
           <AccordionContent className="py-6 bg-zinc-800 border-t-2 border-zinc-700">

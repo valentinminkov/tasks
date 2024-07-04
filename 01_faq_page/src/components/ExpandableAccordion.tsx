@@ -25,7 +25,7 @@ export default function ExpandableAccordion({ items }: Props) {
   };
 
   return (
-    <div className="p-14 bg-zinc-900 min-h-screen">
+    <div className="lg:p-14 p-2 bg-zinc-900 min-h-screen">
       {/* Display placeholder while items are loading */}
       {!itemsToDisplay.length ? (
         <ComponentSkeleton />
